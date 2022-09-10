@@ -25,8 +25,8 @@ const Comments = () => {
   };
 
   const addedCommentHandler = useCallback(() => {
-    sendRequest()
-  }, [sendRequest]);
+    sendRequest(quoteId);
+  }, [sendRequest, quoteId]);
 
   let comments;
 
