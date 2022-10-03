@@ -53,19 +53,9 @@ class App extends Component {
               }}
             ></div>
           )}
-          {/* <div
-            style={{
-              backgroundColor: "red",
-              width: 100,
-              height: 100,
-              margin: "auto",
-            }}
-          ></div> */}
         </Transition>
-        {this.state.modalIsOpen && (
-          <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
-        )}
-        {this.state.modalIsOpen && <Backdrop show={this.state.modalIsOpen} />}
+        <Modal show={this.state.modalIsOpen} closed={this.closeModal} />
+        {this.state.modalIsOpen && <Backdrop show />}
         <button className="Button" onClick={this.showModal}>
           Open Modal
         </button>
